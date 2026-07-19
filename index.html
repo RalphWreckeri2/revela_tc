@@ -6,12 +6,14 @@
     <title>REVELA Platform - Terms and Conditions</title>
     <style>
         :root {
-            --brand-green-bg: #146327; /* Matches the solid deep green app header */
-            --btn-green: #14531d;       /* Matches the solid dark login button */
-            --border-green: #a3c2a8;    /* Soft green border for secondary elements */
+            --deep-green: #14531d;      /* Matches "Secure Login" button / REVELA wordmark */
+            --accent-gold: #d4a72c;     /* Matches the small gold underline accent */
+            --border-green: #a3c2a8;
             --text-dark: #1f2937;
             --text-muted: #6b7280;
-            --bg-canvas: #f3f4f6;
+            --bg-cream: #f7f4ec;        /* Matches the pale cream/olive canvas */
+            --bg-plaid: #eef0df;        /* Subtle plaid/grid tone */
+            --card-bg: #ffffff;
         }
 
         * {
@@ -22,59 +24,76 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--brand-green-bg); /* Full green canvas layout background */
             color: var(--text-dark);
             line-height: 1.6;
+            /* Subtle plaid/grid background like the login screen */
+            background-color: var(--bg-cream);
+            background-image:
+                linear-gradient(rgba(20, 83, 29, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(20, 83, 29, 0.04) 1px, transparent 1px);
+            background-size: 42px 42px;
+            min-height: 100vh;
         }
 
-        /* Top brand area matching the App logo layout */
+        /* Top brand strip echoing the login card's left-panel identity block */
         .app-header-brand {
-            text-align: center;
-            padding: 45px 20px 35px 20px;
-            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            justify-content: center;
+            padding: 40px 20px 24px 20px;
         }
 
         .app-icon-wrapper {
-            width: 90px;
-            height: 90px;
-            background-color: #237737; /* Slightly lighter layered green box */
-            border-radius: 22px;
-            margin: 0 auto 16px auto;
+            width: 56px;
+            height: 56px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-green);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-size: 1.6rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .brand-text-block {
+            text-align: left;
+        }
+
+        .brand-eyebrow {
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
         }
 
         .brand-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--deep-green);
         }
 
         .brand-subtitle {
-            font-size: 0.95rem;
-            color: #d1d5db;
-            opacity: 0.9;
-            margin-top: 4px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
-        /* White sliding sheet container matching the app card panels */
+        /* Card panel echoing the white login card */
         .app-card-panel {
-            background-color: #ffffff;
-            border-radius: 40px 40px 0 0; /* Deep round top corners matching the app sheet */
-            padding: 40px 24px;
-            max-width: 650px;
-            margin: 0 auto;
-            box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.1);
-            min-height: 80vh;
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            padding: 40px 32px;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+            box-shadow: 0 10px 30px rgba(20, 83, 29, 0.08);
+            border: 1px solid #eceee5;
         }
 
         .doc-title-area {
             text-align: center;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .gov-tag {
@@ -82,19 +101,28 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            background-color: #e8f5e9;
-            color: var(--brand-green-bg);
+            background-color: #eef6ee;
+            color: var(--deep-green);
             padding: 4px 12px;
             border-radius: 12px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         h1 {
-            color: var(--btn-green);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 4px;
+            color: var(--deep-green);
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        /* Small gold accent underline, matching the login card's divider */
+        .gold-underline {
+            width: 46px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            border-radius: 2px;
+            margin: 0 auto 12px auto;
         }
 
         .meta-date {
@@ -107,6 +135,7 @@
             color: var(--text-dark);
             font-weight: 500;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         section {
@@ -114,10 +143,12 @@
         }
 
         h2 {
-            color: var(--btn-green);
-            font-size: 1.1rem;
+            color: var(--deep-green);
+            font-size: 1.05rem;
             font-weight: 700;
             margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #eceee5;
         }
 
         p {
@@ -142,18 +173,18 @@
             color: #000000;
         }
 
-        /* Highlight banner styled like the login view inputs/buttons */
+        /* Highlight banner styled like the login view's inputs */
         .highlight-box {
-            background-color: #fafafa;
+            background-color: var(--bg-plaid);
             border: 1px solid var(--border-green);
             padding: 16px;
-            border-radius: 16px; /* Match input radii */
+            border-radius: 14px;
             margin-bottom: 24px;
         }
 
         .highlight-box p {
             margin-bottom: 0;
-            color: var(--btn-green);
+            color: var(--deep-green);
             font-size: 0.9rem;
             font-weight: 500;
             text-align: left;
@@ -167,24 +198,43 @@
             font-size: 0.8rem;
             color: var(--text-muted);
         }
+
+        .footer-powered {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .footer-brand {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--deep-green);
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Top App Brand Area Section -->
+    <!-- Top brand identity area, echoing the login card's left panel -->
     <div class="app-header-brand">
         <div class="app-icon-wrapper">
             <span style="transform: rotate(-15deg); display: inline-block;">🔍</span>
         </div>
-        <div class="brand-title">REVELA</div>
-        <div class="brand-subtitle">Field Inspection Platform</div>
+        <div class="brand-text-block">
+            <div class="brand-eyebrow">Municipality of Mataasnakahoy</div>
+            <div class="brand-title">REVELA</div>
+            <div class="brand-subtitle">Field Inspection Platform</div>
+        </div>
     </div>
 
-    <!-- Slid-up White Card Panel Content -->
+    <!-- Card panel content -->
     <div class="app-card-panel">
         <div class="doc-title-area">
             <div class="gov-tag">Mataasnakahoy BPLO</div>
             <h1>Terms and Conditions</h1>
+            <div class="gold-underline"></div>
             <div class="meta-date">Last Updated: October 26, 2023</div>
         </div>
 
@@ -284,7 +334,14 @@
             <p>For questions or support related to the REVELA platform, please contact your designated BPLO Administrator.</p>
         </section>
 
+        <div class="restricted-note" style="background-color:#fdf2f2;border:1px solid #f3c6c6;color:#b42318;font-size:0.85rem;font-weight:600;text-align:center;padding:14px;border-radius:14px;margin-top:28px;">
+            RESTRICTED ACCESS: Authorized BPLO personnel only.<br>
+            Violators will be prosecuted under RA 10175.
+        </div>
+
         <footer>
+            <div class="footer-powered">Powered by</div>
+            <div class="footer-brand">REVELA</div>
             &copy; 2026 Municipality of Mataasnakahoy - Business Permits and Licensing Office (BPLO). All rights reserved.
         </footer>
     </div>
